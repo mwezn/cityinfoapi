@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ body {
+       background: linear-gradient(90deg, #fefea2,#1299ff);
+    }
+    h1,h2 {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #container {
+        display:flex;
+        flex-direction: row;
+        background-color: rgb(12,27,255,0.5);
+        border:2px solid black;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Our main API homepage</h1>
+    <h2>Written by Mike, Isabel & Immanuel</h2>
+    <div id="container">
+        <div>
+        <form action="/cinemas" method="post">
+        <label for="cars">Choose a city:</label>
+        <select name="cities" id="cities">
+        <option value="Coventry">Coventry</option>
+        <option value="London">London</option>
+        <option value="Birmingham">Birmingham</option>
+        <option value="Manchester">Manchester</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+        </form>
+        </div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
