@@ -7,14 +7,15 @@ class Park {
 }
 
 
-let parks=[
+let parksData=[
    new Park('London', 'Hyde Park'),
    new Park('Coventry', 'Memorial park'),
    new Park('Birmingham', 'Cannon hill park'),
    new Park('Bristol', 'Castle Park'),
    new Park("London", "The Regent's Park"),
    new Park('London', 'Victoria Park'),
-   new Park('London', 'Kensington Gardens')
+   new Park('London', 'Kensington Gardens'),
+   new Park('Manchester','Debdale park' )
 ]
 
 class Cinema {
@@ -25,7 +26,7 @@ class Cinema {
 }
 
 
-let cinemas= [
+let cinemasData= [
    new Cinema("London","Cineworld Leicester Square"),
    new Cinema("London","Curzon Mayfair"),
    new Cinema("London","ODEON Covent Garden"),
@@ -43,7 +44,7 @@ class City {
     }
 }
 
-let cities=[ 
+let citiesData=[ 
 new City("London",10000000), 
 new City("Birmingham",2000000), 
 new City("Manchester",1000000),
@@ -52,4 +53,4 @@ new City("Coventry",300000)]
 
 
 
-module.exports = { cinemas, cities, parks}
+module.exports = { Cinema, City, Park, cinemasData, citiesData, parksData}

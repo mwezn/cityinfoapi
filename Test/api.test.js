@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require("../app");
+const app = require("../server");
 
 describe('api test', () => {
     it('tests /cinema endpoints', async() => {

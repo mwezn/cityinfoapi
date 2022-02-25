@@ -21,28 +21,26 @@
         background-color: rgb(12,27,255,0.5);
         border:2px solid black;
     }
+    ol {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
     </style>
 </head>
 <body>
-    <h1>Our main API homepage</h1>
+    <h1>Our list of cities and parks</h1>
     <h2>Written by Mike, Isabel & Immanuel</h2>
-    <div id="container">
-        <div>
-        <form action="/city" method="post">
-        <label for="cars"><h1>Choose a city to find parks</h1></label>
-        <select name="cities" id="cities">
-        <option value="Coventry">Coventry</option>
-        <option value="London">London</option>
-        <option value="Birmingham">Birmingham</option>
-        <option value="Manchester">Manchester</option>
-        </select>
-        <br><br>
-        <input type="submit" value="Submit">
-        </form>
-        </div>
-        <div></div>
-        <div></div>
-    </div>
+<ol>
+<% cities.forEach((item) => { %>
+<li><%= item.city %> parks:<%= item.name%></li>
+<% }) %>
+</ol>
+
 </body>
 </html>
+
+
+
