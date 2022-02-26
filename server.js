@@ -28,6 +28,13 @@ app.get('/parks/:cityName/', (req, res) => {
         res.json(parks)
     }
 })
+app.post('/city', (req,res)=>{
+    console.log(req.body.cities)
+    let parks=models.parksData;
+    let dt=parks.filter(d=>d.city==req.body.cities)
+    res.render('list.ejs',{cities:dt})
+
+})
 
 
 
@@ -66,14 +73,6 @@ app.post('/cities/create', (req, res) => {
 app.get('/cinemas', (req,res)=> {
     res.json(models.cinemasData)
 })
-app.post('/city', (req,res)=>{
-    console.log(req.body.cities)
-    let parks=models.parksData;
-    let dt=parks.filter(d=>d.city==req.body.cities)
-    res.render('list.ejs',{cities:dt})
-
-})
-
 
 app.get('/cinemas/:cityName/', (req, res) => {
     let cityName = req.params.cityName
