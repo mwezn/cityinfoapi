@@ -11,4 +11,8 @@ describe('api test', () => {
         const res=await request.post("/cinemas")
         expect(res.statusCode).toBe(404)
     })
+    it('Create new park', async ()=>{
+        const res=await request.post("/parks/create")
+        expect(res.statusCode).toBe(400)
+    })
 });

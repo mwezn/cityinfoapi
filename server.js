@@ -8,9 +8,11 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.set('view engine', 'ejs');
 
+let parksData=[ ...models.parksData]
+console.log(parksData)
 /* -----------Root------------ */
 app.get('/', (req, res) => {
-    res.sendFile(__dirname+'/Client/index.html');
+    res.render('index.ejs', {cities: parksData})
 })
 
 /* ------------Park Routes------------ */
@@ -40,7 +42,8 @@ app.post('/city', (req,res)=>{
 
 app.post('/parks/create', (req, res) => {
     const newPark = new models.Park(req.body.city, req.body.name)
-    models.parksData.append(newPark)
+    parksData.push(newPark)
+    console.log(parksData)
     res.status(201).send(newPark);
 
 })

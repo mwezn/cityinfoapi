@@ -21,6 +21,13 @@
         background-color: rgb(12,27,255,0.5);
         border:2px solid black;
     }
+    #container2 {
+        display:flex;
+        flex-direction: row;
+        background-color: rgb(12,27,255,0.5);
+        border:2px solid black;
+
+    }
 
     </style>
 </head>
@@ -41,15 +48,34 @@
         <input type="submit" value="Find">
         </form>
         </div>
+    </div>
+    <div id="container2">
         <div><form action="/parks/create" method="post">
             <label for="cars"><h1>Add a park to a city</h1></label>
-            <label for="city">Enter city</label>
-            <input name="city" type="text">
-            <label for="name">Park</label>
+            <label for="city">Choose city
+                <select name="city" id="cities2">
+                    <option value="Coventry">Coventry</option>
+                    <option value="London">London</option>
+                    <option value="Birmingham">Birmingham</option>
+                    <option value="Manchester">Manchester</option>
+                    </select>
+            </label>
+            <label for="name">Type in park</label>
             <input name="name" type="text">
             <input type="submit" value="Add park">
             </form>
         </div>
+
+    </div>
+
+    <div id="bottom">
+        <h1>Your parks data</h1>
+        <ol>
+        <% cities.forEach((item) => { %>
+        <li><%= item.name %></li>
+        <% }) %>
+        </ol>
+
     </div>
 </body>
 </html>
