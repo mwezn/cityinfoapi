@@ -21,7 +21,7 @@ app.get('/parks', (req, res) => {
 app.get('/parks/:cityName/', (req, res) => {
     let cityName = req.params.cityName
     let parks = models.parksData.filter(park => park.city == cityName)
-    if (parks===[]) {
+    if (parks.length==0) {
         res.status(404)
         res.json({ message: "No parks found"})
     } else {

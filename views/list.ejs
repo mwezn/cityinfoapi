@@ -34,8 +34,9 @@
     <h1>Our list of cities and parks</h1>
     <h2>Written by Mike, Isabel & Immanuel</h2>
 <ol>
+<h1> List of parks in <%= cities[0].city %></h1>
 <% cities.forEach((item) => { %>
-<li><%= item.city %> parks:<%= item.name%></li>
+<li><%= item.name %></li>
 <% }) %>
 </ol>
 
