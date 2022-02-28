@@ -92,4 +92,4 @@ app.get('/cinemas/:cityName/', (req, res) => {
     console.log("Node listening on port "+ PORT)
 }) */
 
-module.exports=app;
+module.exports=app
